@@ -18,6 +18,27 @@
 
 - I have already created AWS Profile free tier with Access and secret Access key.
 - I have installed following software in my laptop: Terraform, AWS CLI, git.
-Before installing, I have created s3 bucket with versioning enabled in order to store the Terraform state remotely with the same name I have added backend.tf
+Before installing, I have created s3 bucket with versioning enabled in order to store the Terraform state remotely and dynamodb table with the same name I have added backend.tf
 
-``` git clone 
+
+```
+git clone https://github.com/akgovindaraj1989/wordpress_and_web_scrapper.git
+```
+- Once git cloned successfully please edit the **backend.tf** with created s3 bucket name and do othe same same for dynamodb table for lock as below:
+```
+   terraform {
+  backend "s3" {
+    bucket         = "<your-bucket-name>"
+    key            = "terraform.tfstate"
+    region         = "eu-west-2"  
+    encrypt        = true
+    dynamodb_table = "<your-dynamodb-lock-table-name>"  
+  }
+```
+- If you you want different region please feel free to change the region in **backend.tf** please change the availability zone details in **variable.tf**.
+-  please save the file and go to command line or powershell run the below command:
+```
+terraform init
+terraform plan
+terraform apply
+```
