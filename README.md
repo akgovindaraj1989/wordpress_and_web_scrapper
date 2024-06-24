@@ -44,6 +44,7 @@ terraform apply
 ```
 ## Part 1: Listing top 20 articles using python code (webscraping)
 - Please install latest version of python and ensure the internet connectivity where you are going to run the python code.
+- From the command line or powershell run the below command:
   ```
-  python code.py
+  python article_reader_python.py
   ```
