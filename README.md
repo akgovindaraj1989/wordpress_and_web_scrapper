@@ -1,6 +1,6 @@
 # WORDPRESS on AWS Using Terraform and python code for webscraping
-## 3-Tier Multi-AZ WordPress Application using Infrastrucure as Code (IAC)
-### Part 1: Terraform code for 3-Tier Multi-AZ wordpress appliction installation and Insfrastruction provision.
+## Part 1: Terraform code for 3-Tier Multi-AZ wordpress appliction installation and Insfrastruction provision.
+### 3-Tier Multi-AZ WordPress Application using Infrastrucure as Code (IAC)
 ### **Infrastructure details as below:**
 1) Network Infrastructure
 - A single VPC (vpc.tf) and Internet Gateway (IGW) (internetgateway.tf)
@@ -42,3 +42,8 @@ terraform init
 terraform plan
 terraform apply
 ```
+## Part 1: Listing top 20 articles using python code (webscraping)
+- Please install latest version of python and ensure the internet connectivity where you are going to run the python code.
+  ```
+  python code.py
+  ```
