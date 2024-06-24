@@ -42,9 +42,11 @@ terraform init
 terraform plan
 terraform apply
 ```
-## Part 1: Listing top 20 articles using python code (webscraping)
+- In the **output.tf** I have added Loadbalancer URL and VPC and subnets details show in the command line or powershell copy the LoadBalancer and paste it in the browser to check the wordpress in the beginning apache httpd server might come please wait for few mins to load the wordpress.
+  
+## Part 2: Listing top 20 articles using python code (webscraping)
 - Please install latest version of python and ensure the internet connectivity where you are going to run the python code.
 - From the command line or powershell run the below command:
-  ```
-  python article_reader_python.py
-  ```
+```
+python article_reader_python.py
+```
