@@ -12,7 +12,7 @@
 - AWS Relational Database Service (RDS) resource (rdsdb.tf)
 - AWS Secrets Manager (secrets.tf)
 - Launch configuration (ec2.tf)
--  load balancer (alb.tf), listener , asuto scaling group (asg.tf)
+-  load balancer (alb.tf), listener , auto scaling group (asg.tf)
 ![WordPress AWS Architechture](/wordpress/wordpress_aws_architecture.PNG)
 
 #### Installation Process:
