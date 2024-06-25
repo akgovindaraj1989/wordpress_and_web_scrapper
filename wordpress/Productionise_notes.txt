@@ -1,0 +1,38 @@
+Network Infrastructure
+1. Virtual Private Cloud (VPC) and Internet Gateway (IGW):
+	I will enable the VPC flow logs to capture information about IP traffic going to and from network interfaces in VPC for monitoring and troubleshooting.
+2. Availability Zones (AZs)
+	I will consider more than two Availability zones if application demands high availability.
+3. Subnets
+	I would consider to use NACLs (Network ACLs) to enhance security.
+
+Application Infrastructure
+1. Security Groups
+	1)I would use the principle of least privilege. Only open necessary ports and to specific IP addresses or security groups.
+	2)If necessary I would create a config map with custom rule to check the if any changes done to security group or EC2 instance login etc.
+	3)Enable AWS WAF (Web Application Firewall) to protect against common web exploits.
+2. AWS RDS
+	1)I would use RDS with multi-AZ deployment for high availability.
+	2)I would enable the delete protection to the RDS.
+	3)I would enable automated backups and snapshots for disaster recovery.
+	4)Encrypt RDS instances and snapshots using AWS KMS.
+	5)If it is an most critical application then I would create cross region replicas by creating a read replicas RDS.
+3. AWS Secrets Manager
+	1)Store database credentials and other secrets in AWS Secrets Manager.
+	2)Use IAM policies to tightly control access to Secrets Manager.
+	3)Rotate secrets periodically to enhance security.
+4. Launch Configuration and Auto Scaling Group
+	1)I would prefer to use launch templates instead of launch configurations for better flexibility.
+	2)Periodically I would check the AMIs used in launch templates are up-to-date and have the latest security patches this can be achieved by using systems manager.
+	3)In the target group set up health checks to automatically replace unhealthy instances.
+	4)If autoscaling required to be dynamic I would setup the CPU metrics etc to scale the instance horizontally.
+5. Load Balancer
+	1)Use an Application Load Balancer (ALB) with SSL termination to handle HTTPS traffic.
+	2)Ensure ALB listeners redirect HTTP traffic to HTTPS.
+	3)Use AWS Certificate Manager (ACM) to manage SSL/TLS certificates.
+	4)If required enable ALB access logs for monitoring and auditing purposes.
+6) DNS
+	1)I would create DNS as per customer requirement and create a CNAME to route the traffic to the Load balancer.
+7) Logging
+	1)I would setup cloudwatch logging for system log I would setup cloudwatch logging agent to collect system logs (e.g., /var/log/syslog, /var/log/messages).
+	2)For application level logging would need change the php file to enable logging by enabling debug.
