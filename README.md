@@ -13,8 +13,9 @@
 - AWS Secrets Manager (secrets.tf)
 - Launch configuration (ec2.tf)
 -  load balancer (alb.tf), listener , asuto scaling group (asg.tf)
+![WordPress AWS Architechture](/wordpress/wordpress_aws_architecture.PNG)
 
-#### Installation Process
+#### Installation Process:
 
 - I have already created AWS Profile free tier with Access and secret Access key.
 - I have installed following software in my laptop: Terraform, AWS CLI, git.
