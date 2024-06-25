@@ -13,6 +13,7 @@
 - AWS Secrets Manager (secrets.tf)
 - Launch configuration (ec2.tf)
 -  load balancer (alb.tf), listener , auto scaling group (asg.tf)
+### Wordpress AWS Architecture:
 ![WordPress AWS Architechture](/wordpress/wordpress_aws_architecture.PNG)
 
 #### Installation Process:
