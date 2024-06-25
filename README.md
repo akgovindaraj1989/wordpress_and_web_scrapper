@@ -44,7 +44,7 @@ terraform init
 terraform plan
 terraform apply
 ```
-- In the **output.tf** I have added Loadbalancer URL and VPC and subnets details show in the command line or powershell copy the LoadBalancer and paste it in the browser to check the wordpress in the beginning apache httpd server might come please wait for few mins to load the wordpress.
+- In the **output.tf** I have added Loadbalancer URL and VPC and subnets details shows in the command line or powershell copy the LoadBalancer and paste it in the browser to check the wordpress in the beginning apache httpd server might come please wait for few mins to load the wordpress.
   
 ## Part 2: Listing top 20 articles using python code (webscraping)
 - Please install latest version of python and ensure the internet connectivity where you are going to run the python code.
